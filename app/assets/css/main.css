@@ -35,6 +35,9 @@
   --color-icon-linux: #fcc624;
   --color-icon-pinia: #ffd859;
   --color-icon-fastapi: #009688;
+  --color-icon-zig: #F7A41D;
+  --color-icon-claude: #D97757;
+  --color-icon-cloudflare: #F38020;
 
   --font-silk-screen: "Silkscreen", monospace;
 }

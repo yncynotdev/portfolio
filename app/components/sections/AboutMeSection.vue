@@ -9,14 +9,9 @@
         back-end projects using Golang.
         <br>
 
-        Driven by curiosity, I also venture into other technologies when I take
-        a break doing front-end stuff such as back-end development using Golang,
-        Python with FastAPI for content, game development, and the Linux
-        technology.
-        <br>
-
-        My ultimate priority now is to master back-end systems using Golang.
-        Currently seeking for internship.
+        I'am currently learning low-level programming languages such as Rust,
+        Zig, and Go. I also currently learning agentic-AI engineering for job.
+        But my ultimate goal is to create a small scope game using Godot.
       </p>
     </UCard>
   </section>
