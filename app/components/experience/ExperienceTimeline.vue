@@ -20,7 +20,7 @@ const active = ref(1);
 <template>
   <UTimeline v-model="active" :items="items" color="neutral" size="sm">
     <template #title="{ item }">
-      <h3 class="font-silk-screen font-bold text-lg lg:text-xl text-fg-500 dark:text-ctp-green-200">
+      <h3 class="font-silk-screen font-bold text-lg lg:text-xl text-secondary-600">
         {{ item.title }} - <span>{{ item.company }}</span>
       </h3>
     </template>

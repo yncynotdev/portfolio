@@ -5,7 +5,7 @@ const props = defineProps<Technologies>();
 </script>
 
 <template>
-  <UCard class="items-center bg-base-500 text-fg-500 dark:border-ctp-green-200 border-fg-500 border">
+  <UCard class="items-center bg-base-500 text-fg-500 border-3 border-purple-400">
     <div class="flex flex-col items-center">
       <Icon :name="props.icon" :size="props.size" :class="props.color"/>
       <h4 class="text-[0.8rem]">{{ props.name }}</h4>
