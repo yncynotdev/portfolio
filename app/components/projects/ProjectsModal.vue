@@ -75,9 +75,9 @@ function onHandleWidthSize() {
     </template>
 
     <template #footer>
-      <div class="flex flex-col gap-5">
-        <ProjectsTechStack :lists="props.techstack" />
-        <ProjectsLink :project-url="props.projectUrl" :github-url="props.githubUrl" />
+      <div class="flex flex-col gap-5 w-full items-center font-silk-screen text-base-500">
+          <UButton icon="i-lucide-link" class="bg-linear-to-r from-primary-500 to-primary-400">View Project</UButton>
+          <UButton icon="simple-icons:github" class="bg-linear-to-r from-primary-500 to-primary-400">View Project</UButton>
       </div>
     </template>
   </UModal>
