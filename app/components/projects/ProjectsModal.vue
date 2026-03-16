@@ -39,7 +39,7 @@ function onHandleWidthSize() {
   <UModal>
     <UButton
       label="View Project"
-      class="w-full flex items-center justify-center bg-linear-to-r from-primary-500 to-primary-400 hover:bg-secondary-500 font-silk-screen" />
+      class="w-full flex items-center justify-center bg-linear-to-r from-primary-500 to-primary-400 font-silk-screen" />
 
     <template #title>
       <h3>{{ props.title }}</h3>
