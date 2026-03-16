@@ -15,10 +15,10 @@ onMounted(() => {
   <UCard
     variant="subtle"
     :ui="{ header: 'border-none', footer: 'border-fg-500', body: 'flex-1' }"
-    class="h-full flex flex-col bg-base-500 text-fg-500 border dark:border-ctp-green-200 border-fg-500 rounded-sm"
+    class="h-full flex flex-col bg-base-500 text-fg-500 border-3 border-primary-500 rounded-sm"
   >
     <template #header>
-      <h3 class="text-lg lg:text-xl">{{ props.title }}</h3>
+      <h3 class="text-lg lg:text-xl text-primary-500">{{ props.title }}</h3>
       <p>{{ props.description }}</p>
     </template>
 

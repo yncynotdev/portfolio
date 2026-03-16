@@ -31,7 +31,7 @@ const projects: Projects[] = [
     description:
       "A fun project dedicated to my girlfriend❤️. " +
       "It has a basic authentication features from Supabase and form validation using Zod." +
-      "Temporarily deployed in Vercel, but I'm taking a time to host it in a better hosting solutions.",
+      "Currently deployed in Vercel",
     githubUrl: "https://github.com/yncynotdev/monthsary",
     images: [monthsary, monthsary1, monthsary2, monthsary3, monthsary4, monthsary5],
     imageUrl: monthsary,

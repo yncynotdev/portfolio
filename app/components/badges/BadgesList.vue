@@ -1,15 +1,7 @@
 <template>
-  <div
-    class="flex flex-col lg:flex-row gap-3 max-w-screen w-full font-silk-screen"
-  >
-    <UBadge class="text-md bg-gradient-to-r from-ctp-red-200 to-ctp-yellow-200 text-black"
-      >Web Developer</UBadge
-    >
-    <UBadge class="text-md bg-gradient-to-r from-ctp-green-200 to-ctp-teal-200 text-black"
-      >Vue/React Developer</UBadge
-    >
-    <UBadge class="text-md bg-gradient-to-r from-ctp-blue-200 to-ctp-sapphire-200 text-black"
-      >Go/Python Developer</UBadge
-    >
-  </div>
+    <div class="grid grid-rows-3 lg:grid-cols-3 lg:grid-rows-1 gap-5 max-w-screen w-full font-silk-screen">
+        <UBadge class="text-md bg-linear-to-r from-primary-500 to-primary-400 text-black">AI-Native</UBadge>
+        <UBadge class="text-md bg-linear-to-r from-secondary-600 to-secondary-500 text-black">Frontend</UBadge>
+        <UBadge class="text-md bg-linear-to-r from-tertiary-500 to-tertiary-400 text-black">Backend</UBadge>
+    </div>
 </template>

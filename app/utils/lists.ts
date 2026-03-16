@@ -167,6 +167,34 @@ export const techStackList: Technologies[] = [
   },
 ];
 
+export const learnStackList: Technologies[] = [
+  {
+    name: "Rust",
+    icon: "simple-icons:rust",
+    size: 32,
+    color: "text-fg-500"
+  },
+  {
+    name: "Zig",
+    icon: "simple-icons:zig",
+    size: 32,
+    color: "text-icon-zig"
+  },
+  {
+    name: "Claude Code",
+    icon: "simple-icons:claude",
+    size: 32,
+    color: "text-icon-claude"
+  },
+  {
+    name: "Cloudflare",
+    icon: "simple-icons:cloudflare",
+    size: 32,
+    color: "text-icon-cloudflare"
+  },
+];
+
+
 /**
  * @type Technologies
  *

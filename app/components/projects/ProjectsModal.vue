@@ -39,7 +39,7 @@ function onHandleWidthSize() {
   <UModal>
     <UButton
       label="View Project"
-      class="w-full flex items-center justify-center bg-fg-500 dark:bg-ctp-green-200 hover:bg-fg-300 font-silk-screen" />
+      class="w-full flex items-center justify-center bg-linear-to-r from-primary-500 to-primary-400 font-silk-screen" />
 
     <template #title>
       <h3>{{ props.title }}</h3>
@@ -75,9 +75,9 @@ function onHandleWidthSize() {
     </template>
 
     <template #footer>
-      <div class="flex flex-col gap-5">
-        <ProjectsTechStack :lists="props.techstack" />
-        <ProjectsLink :project-url="props.projectUrl" :github-url="props.githubUrl" />
+      <div class="flex flex-col gap-5 w-full items-center font-silk-screen text-base-500">
+          <UButton icon="i-lucide-link" class="bg-linear-to-r from-primary-500 to-primary-400">View Project</UButton>
+          <UButton icon="simple-icons:github" class="bg-linear-to-r from-primary-500 to-primary-400">View Project</UButton>
       </div>
     </template>
   </UModal>
