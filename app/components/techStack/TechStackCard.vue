@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import type { Technologies } from '~/utils/types';
+import type { Technologies } from "~/utils/types";
 
 const props = defineProps<Technologies>();
 </script>
 
 <template>
-  <UCard class="items-center bg-base-500 text-fg-500 border-3 border-purple-400">
+  <UCard class="items-center bg-base-500 text-fg-500 border-3 border-primary-500">
     <div class="flex flex-col items-center">
-      <Icon :name="props.icon" :size="props.size" :class="props.color"/>
+      <Icon :name="props.icon" :size="props.size" :class="props.color" />
       <h4 class="text-[0.8rem]">{{ props.name }}</h4>
     </div>
   </UCard>

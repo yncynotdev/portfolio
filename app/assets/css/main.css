@@ -17,17 +17,6 @@
   --color-primary-500: #ee8695;
   --color-primary-400: #fbbbad;
 
-  --color-secondary-500: #c4f0c2;
-  --color-secondary-600: #5ab9a8;
-
-  --color-tertiary-400: #e7d99c;
-  --color-tertiary-500: #e3ba66;
-
-  --color-purple-300: #ce79d2;
-  --color-purple-400: #a065cd;
-  --color-purple-500: #6e51c8;
-  --color-purple-600: #3c42c4;
-
   --color-icon-html: #e34f26;
   --color-icon-css: #663399;
   --color-icon-js: #f7df1e;
@@ -52,6 +41,11 @@
   --color-icon-zig: #F7A41D;
   --color-icon-claude: #D97757;
   --color-icon-cloudflare: #F38020;
+  --color-icon-hono: #E36002;
+  --color-icon-artix: #10A0CC;
+  --color-icon-neon: #34D59A;
+  --color-icon-ghostty: #3551F3;
+  --color-icon-lua: #000080;
 
   --font-silk-screen: "Silkscreen", monospace;
 }
@@ -60,6 +54,9 @@
   --color-base-500: #232136;
   --color-base-600: #2a273f;
   --color-base-700: #393552;
+
+  --color-primary-500: #f69197;
+  --color-primary-400: #ffc4b8;
 
   --color-fg-500: #e0def4;
   --color-fg-400: #908caa;
