@@ -223,18 +223,6 @@ export const portfolioTechStack: Technologies[] = [
     color: "text-icon-vue",
   },
   {
-    name: "Nuxt",
-    icon: "simple-icons:nuxt",
-    size: 12,
-    color: "text-icon-nuxt",
-  },
-  {
-    name: "Tailwind",
-    icon: "simple-icons:tailwindcss",
-    size: 12,
-    color: "text-icon-tailwind",
-  },
-  {
     name: "TypeScript",
     icon: "simple-icons:typescript",
     size: 12,
@@ -254,18 +242,6 @@ export const monthsaryTechStack: Technologies[] = [
     icon: "simple-icons:vuedotjs",
     size: 12,
     color: "text-icon-vue",
-  },
-  {
-    name: "Nuxt",
-    icon: "simple-icons:nuxt",
-    size: 12,
-    color: "text-icon-nuxt",
-  },
-  {
-    name: "Tailwind",
-    icon: "simple-icons:tailwindcss",
-    size: 12,
-    color: "text-icon-tailwind",
   },
   {
     name: "TypeScript",
@@ -293,18 +269,6 @@ export const roomieTechStack: Technologies[] = [
     icon: "simple-icons:vuedotjs",
     size: 12,
     color: "text-icon-vue",
-  },
-  {
-    name: "Nuxt",
-    icon: "simple-icons:nuxt",
-    size: 12,
-    color: "text-icon-nuxt",
-  },
-  {
-    name: "Tailwind",
-    icon: "simple-icons:tailwindcss",
-    size: 12,
-    color: "text-icon-tailwind",
   },
   {
     name: "TypeScript",

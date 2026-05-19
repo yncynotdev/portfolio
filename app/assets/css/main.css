@@ -17,6 +17,12 @@
   --color-primary-500: #ee8695;
   --color-primary-400: #fbbbad;
 
+  --color-secondary-500: #54cea7;
+  --color-secondary-400: #00b9be;
+
+  --color-tertiary-400: #e7d99c;
+  --color-tertiary-500: #e3ba66;
+
   --color-icon-html: #e34f26;
   --color-icon-css: #663399;
   --color-icon-js: #f7df1e;
@@ -48,6 +54,7 @@
   --color-icon-lua: #000080;
 
   --font-silk-screen: "Silkscreen", monospace;
+  --font-pixelify-sans: 'Pixelify Sans', sans-serif;
 }
 
 .dark {
@@ -89,8 +96,12 @@ strong {
 
 a,
 p,
+ {
+  font-size: 1.1rem;
+}
+
 button {
-  font-size: 0.9rem;
+  font-size: 0.9rem
 }
 
 body {
@@ -101,7 +112,8 @@ body {
     color 0.5s,
     background-color 0.5s;
   line-height: 1.6;
-  font-family: "Poppins", monospace;
+  font-family: "Pixelify Sans", sans-serif;
+  /* font-family: "Poppins", monospace; */
   font-size: 0.9rem;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
