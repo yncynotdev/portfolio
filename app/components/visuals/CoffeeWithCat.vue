@@ -106,5 +106,5 @@ function onWindowResize() {
 </script>
 
 <template>
-  <div ref="container" class="w-full xl:w-1/2 max-w-screen h-dvh" />
+  <div ref="container" class="w-full xl:w-1/2 max-w-screen h-dvh hidden lg:inline" />
 </template>
