@@ -1,7 +1,6 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 @import "tw-animate-css";
-@import "@catppuccin/tailwindcss/mocha.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -112,7 +111,7 @@ body {
     color 0.5s,
     background-color 0.5s;
   line-height: 1.6;
-  font-family: "Pixelify Sans", sans-serif;
+  font-family: "Silkscreen", monospace;
   /* font-family: "Poppins", monospace; */
   font-size: 0.9rem;
   text-rendering: optimizeLegibility;
