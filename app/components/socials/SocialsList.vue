@@ -6,7 +6,7 @@ const items: Socials[] = [
     aria: "Link to GitHub",
   },
   {
-    link: "mailto:yncyncy0@gmail.com",
+    link: "mailto:paalayancy@gmail.com",
     icon: "simple-icons:gmail",
     aria: "Link to Gmail",
   },
