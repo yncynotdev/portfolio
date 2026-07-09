@@ -15,8 +15,8 @@
     </a>
 
     <span class="flex-row items-center gap-7 hidden lg:flex">
-      <ULink to="/">Home</ULink>
-      <ULink to="/game-jams">Game Jams</ULink>
+      <!-- <ULink to="/">Home</ULink> -->
+      <!-- <ULink to="/game-jams">Game Jams</ULink> -->
       <ToggleTheme />
     </span>
   </header>

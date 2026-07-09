@@ -1,19 +1,25 @@
 <template>
-  <section class="flex flex-col-reverse lg:flex-row lg:items-center w-full max-w-screen">
+  <section
+    class="flex flex-col-reverse lg:flex-row lg:items-center w-full max-w-screen py-10 lg:py-0"
+  >
     <section
       class="flex flex-col justify-center items-start gap-4 lg:gap-7 h-full w-full max-w-screen lg:pb-28"
     >
       <h1 class="text-2xl lg:text-5xl">
-        <span class="bg-linear-to-r from-purple-500 to-purple-400">
-          <strong class="text-transparent">It is I,</strong>
-        </span>
-        <span class="bg-linear-to-r from-primary-500 to-primary-400">
-          <strong class="text-transparent">It is I, Yancy! </strong>
+        <strong>It is I,</strong>
+        <span
+          class="bg-linear-to-r from-green-400 to-green-300 dark:from-green-500 dark:to-green-400"
+        >
+          <strong class="text-transparent">Yancy!</strong>
         </span>
         <br />
-        <strong class="text-[2rem] lg:text-6xl"> Your average programming enjoyer! </strong>
+        <strong class="text-[2rem] lg:text-6xl">
+          A
+          <span class="bg-linear-to-r from-primary-500 to-primary-400 text-transparent"
+            ><strong>Full Stack Developer</strong></span
+          >
+        </strong>
       </h1>
-      <BadgesList />
     </section>
 
     <CoffeeWithCat />

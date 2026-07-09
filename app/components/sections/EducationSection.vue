@@ -3,12 +3,7 @@ const education: Education[] = [
   {
     school: "La Consolacion University Philippines",
     course: "Bachelor of Science in Information Technology",
-    year: "Expected Year - 2026",
-  },
-  {
-    school: "La Consolacion University Philippines",
-    course: "Technological Vocational Course - Information and Communications Technology",
-    year: "2022",
+    year: "2026",
   },
 ];
 </script>

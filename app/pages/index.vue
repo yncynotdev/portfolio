@@ -1,6 +1,6 @@
 <template>
   <HeroSection />
-  <AboutMeSection class="pt-20 lg:pt-0" />
+  <AboutMeSection />
   <ExperienceSection />
   <ProjectsSection />
   <TechStackSection />
