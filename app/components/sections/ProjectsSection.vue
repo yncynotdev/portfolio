@@ -1,8 +1,4 @@
 <script setup lang="ts">
-// import roomie from "@/assets/images/projects/roomie/sample.png";
-// import roomie1 from "@/assets/images/projects/roomie/1.png";
-// import roomie2 from "@/assets/images/projects/roomie/2.png";
-// import roomie3 from "@/assets/images/projects/roomie/3.png";
 import monthsary from "@/assets/images/projects/monthsary/index.png";
 import monthsary1 from "@/assets/images/projects/monthsary/1.png";
 import monthsary2 from "@/assets/images/projects/monthsary/2.png";
@@ -13,14 +9,20 @@ import portfolio from "@/assets/images/projects/portfolio/index.png";
 import portfolio1 from "@/assets/images/projects/portfolio/1.png";
 import portfolio2 from "@/assets/images/projects/portfolio/2.png";
 import portfolio3 from "@/assets/images/projects/portfolio/3.png";
+import peter from "@/assets/images/projects/peter.png";
 
 const projects: Projects[] = [
   {
+    title: "PETER",
+    description: "A camera-based attendance system built using Nuxt and Hono.",
+    githubUrl: "",
+    imageUrl: peter,
+    projectUrl: "https://peter-app-cf.pages.dev",
+    techstack: peterTechStack,
+  },
+  {
     title: "Monthsary Website",
-    description:
-      "A fun project dedicated to my girlfriend❤️. " +
-      "It has a basic authentication features from Supabase and form validation using Zod." +
-      "Currently deployed in Vercel",
+    description: "A project about my girlfriend built using Nuxt and Supabase.",
     githubUrl: "https://github.com/yncynotdev/monthsary",
     images: [monthsary, monthsary1, monthsary2, monthsary3, monthsary4, monthsary5],
     imageUrl: monthsary,
@@ -29,8 +31,7 @@ const projects: Projects[] = [
   },
   {
     title: "Portfolio",
-    description:
-      "This project is to showcase my other projects and skills. Currently deployed in Vercel, can you find the easter egg??.",
+    description: "A creative portfolio built with Nuxt.",
     githubUrl: "https://github.com/yncynotdev/portfolio",
     images: [portfolio, portfolio1, portfolio2, portfolio3],
     imageUrl: portfolio,

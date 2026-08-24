@@ -1,8 +1,11 @@
 export default defineAppConfig({
   ui: {
+    colors: {
+      primary: "rose",
+    },
     modal: {
       slots: {
-        content: "bg-base-600"
+        content: "bg-base-600",
       },
       variants: {
         fullscreen: {

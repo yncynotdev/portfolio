@@ -2,7 +2,7 @@
 import { onMounted, nextTick, ref } from "vue";
 import { useResizeObserver } from "@vueuse/core";
 import * as THREE from "three";
-import { GLTFLoader } from "three/examples/jsm/Addons.js";
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
 let camera: THREE.PerspectiveCamera;
 let scene: THREE.Scene;
@@ -61,19 +61,19 @@ function loadGLTF() {
     scene.add(mesh);
 
     function animate() {
-      requestAnimationFrame(animate)
+      requestAnimationFrame(animate);
 
       mesh.rotation.x += 0.01;
       mesh.rotation.y += 0.01;
       mesh.rotation.z += 0.01;
     }
 
-    animate()
+    animate();
   });
 }
 
 function animate() {
-  requestAnimationFrame(animate)
+  requestAnimationFrame(animate);
 
   renderer.render(scene, camera);
 }

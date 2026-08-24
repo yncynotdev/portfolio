@@ -1,104 +1,131 @@
 <script setup>
-import { onMounted, nextTick, ref } from "vue";
+import { onBeforeUnmount, onMounted, useTemplateRef } from "vue";
 import { useResizeObserver } from "@vueuse/core";
 import * as THREE from "three";
-import { GLTFLoader } from "three/examples/jsm/Addons.js";
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
 import degreeToRadians from "@/utils/degreeToRadians";
 
-const container = ref(null);
+const container = useTemplateRef("container");
+const canvas = useTemplateRef("canvas");
 
-const clock = new THREE.Clock();
+const clock = new THREE.Timer();
 
-let camera, scene, renderer;
+let camera;
+let scene;
+let renderer;
 
-let ambientLight, directionalLight;
+let ambientLight;
+let directionalLight;
 
-let mesh, mixer;
+let mesh;
+let mixer;
 
-// stands for dimension
 const d = 9;
 
-onMounted(async () => {
-  await nextTick();
+onMounted(init);
 
-  init();
+onBeforeUnmount(() => {
+  renderer?.setAnimationLoop(null);
+  renderer?.dispose();
 });
 
 useResizeObserver(container, () => {
-  if (container.value) onWindowResize();
+  if (container.value) {
+    onWindowResize();
+  }
 });
 
 function init() {
-  if (!container.value) return;
+  const element = container.value;
+
+  if (!element || !canvas.value) return;
+
   scene = new THREE.Scene();
 
-  const width = container.value.clientWidth;
-  const height = container.value.clientHeight;
+  const width = element.clientWidth;
+  const height = element.clientHeight;
 
   const aspect = width / height;
+
   camera = new THREE.OrthographicCamera(-d * aspect, d * aspect, d, -d, 1, 1000);
 
   camera.position.set(d, d, d);
   camera.lookAt(scene.position);
 
   ambientLight = new THREE.AmbientLight(0xffffff, 1);
-  directionalLight = new THREE.DirectionalLight(0xffffff, 2);
 
+  directionalLight = new THREE.DirectionalLight(0xffffff, 2);
   directionalLight.position.set(0, 5, 5);
 
-  scene.add(camera, ambientLight, directionalLight);
+  scene.add(camera);
+  scene.add(ambientLight);
+  scene.add(directionalLight);
 
-  renderer = new THREE.WebGLRenderer({ alpha: true });
-  renderer.setSize(container.value.clientWidth, container.value.clientHeight);
-  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer = new THREE.WebGLRenderer({
+    canvas: canvas.value,
+    alpha: true,
+    antialias: true,
+  });
 
-  container.value.appendChild(renderer.domElement);
+  renderer.setSize(width, height);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
   loadGLTF();
+
+  renderer.setAnimationLoop(animate);
 }
 
 function loadGLTF() {
   const gltfLoader = new GLTFLoader();
 
-  const url = "/models/coffee_with_cat.glb";
+  gltfLoader.load(
+    "/models/coffee_with_cat.glb",
+    (gltf) => {
+      mesh = gltf.scene;
 
-  gltfLoader.load(url, (gltf) => {
-    mesh = gltf.scene;
-    mesh.rotation.set(degreeToRadians(0), degreeToRadians(90), degreeToRadians(0));
+      mesh.rotation.set(degreeToRadians(0), degreeToRadians(90), degreeToRadians(0));
 
-    mesh.position.x = 2;
-    mesh.position.z = 2.3;
+      mesh.position.x = 2;
+      mesh.position.z = 2.3;
 
-    scene.add(mesh);
+      scene.add(mesh);
 
-    const animations = gltf.animations;
-    mixer = new THREE.AnimationMixer(mesh);
-    const action = mixer.clipAction(animations[0]);
-    action.play();
+      if (gltf.animations.length > 0) {
+        mixer = new THREE.AnimationMixer(mesh);
 
-    renderer.setAnimationLoop(animate);
-  });
+        const action = mixer.clipAction(gltf.animations[0]);
+        action.play();
+      }
+    },
+    undefined,
+    (error) => {
+      console.error("Failed to load GLTF:", error);
+    },
+  );
 }
 
 function animate() {
-  const mixerUpdateDelta = clock.getDelta();
-
-  mixer.update(mixerUpdateDelta);
-
+  clock.update();
+  mixer?.update(clock.getDelta());
   renderer.render(scene, camera);
 }
 
 function onWindowResize() {
-  if (!container.value) return;
-  const width = container.value.clientWidth;
-  const height = container.value.clientHeight;
+  const element = container.value;
+
+  if (!element || !camera || !renderer) return;
+
+  const width = element.clientWidth;
+  const height = element.clientHeight;
+
   const aspect = width / height;
 
   camera.left = -d * aspect;
   camera.right = d * aspect;
   camera.top = d;
   camera.bottom = -d;
+
   camera.updateProjectionMatrix();
 
   renderer.setSize(width, height);
@@ -106,5 +133,7 @@ function onWindowResize() {
 </script>
 
 <template>
-  <div ref="container" class="w-full xl:w-1/2 max-w-screen h-dvh hidden lg:inline" />
+  <div ref="container" class="hidden h-dvh w-full lg:block">
+    <canvas ref="canvas" class="h-full w-full" />
+  </div>
 </template>

@@ -1,7 +1,5 @@
 <template>
-  <section
-    class="flex flex-col-reverse lg:flex-row lg:items-center w-full max-w-screen py-10 lg:py-0"
-  >
+  <section class="flex flex-col-reverse lg:flex-row lg:items-center w-full max-w-screen">
     <section
       class="flex flex-col justify-center items-start gap-4 lg:gap-7 h-full w-full max-w-screen lg:pb-28"
     >
@@ -20,6 +18,7 @@
           >
         </strong>
       </h1>
+      <HireMeButton />
     </section>
 
     <CoffeeWithCat />

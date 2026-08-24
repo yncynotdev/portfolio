@@ -6,5 +6,5 @@
   <TechStackSection />
   <EducationSection />
 
-  <HireMeButton />
+  <!-- <HireMeButton /> -->
 </template>

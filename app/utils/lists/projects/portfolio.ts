@@ -1,9 +1,9 @@
 export const portfolioTechStack: Technologies[] = [
   {
-    name: "Vue",
-    icon: "simple-icons:vuedotjs",
+    name: "Nuxt",
+    icon: "simple-icons:nuxt",
     size: 12,
-    color: "text-icon-vue",
+    color: "text-icon-nuxt",
   },
   {
     name: "TypeScript",

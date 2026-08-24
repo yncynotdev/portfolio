@@ -1,10 +1,10 @@
-@import "tailwindcss";
+@import "tailwindcss" theme(static);
 @import "@nuxt/ui";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
-@theme {
+@theme static{
   --color-base-500: #faf4ed;
   --color-base-600: #fffaf3;
   --color-base-700: #f2e9e1;
@@ -13,8 +13,17 @@
   --color-fg-400: #797593;
   --color-fg-300: #9893a5;
 
-  --color-primary-500: #ee8695;
-  --color-primary-400: #fbbbad;
+  --color-rose-50: #fddde0;
+  --color-rose-100: #fbccd0;
+  --color-rose-200: #f9bbc1;
+  --color-rose-300: #f6a9b2;
+  --color-rose-400: #f298a3;
+  --color-rose-500: #ee8695;
+  --color-rose-600: #c8727e;
+  --color-rose-700: #a45f68;
+  --color-rose-800: #814c53;
+  --color-rose-900: #603a3f;
+  --color-rose-950: #40282b;
 
   --color-secondary-500: #54cea7;
   --color-secondary-400: #00b9be;
@@ -51,6 +60,8 @@
   --color-icon-neon: #34D59A;
   --color-icon-ghostty: #3551F3;
   --color-icon-lua: #000080;
+  --color-icon-hono: #E36002;
+  --color-icon-cloudflare: #F38020;
 
   --font-silk-screen: "Silkscreen", monospace;
   --font-pixelify-sans: 'Pixelify Sans', sans-serif;
@@ -61,8 +72,17 @@
   --color-base-600: #2a273f;
   --color-base-700: #393552;
 
-  --color-primary-500: #f69197;
-  --color-primary-400: #ffc4b8;
+  --color-rose-50: #fbe2e0;
+  --color-rose-100: #f9d4d1;
+  --color-rose-200: #f6c5c2;
+  --color-rose-300: #f2b7b4;
+  --color-rose-400: #eea8a5;
+  --color-rose-500: #ea9a97;
+  --color-rose-600: #db9794;
+  --color-rose-700: #cc9390;
+  --color-rose-800: #bd908d;
+  --color-rose-900: #ae8c8a;
+  --color-rose-950: #9f8886;
 
   --color-fg-500: #e0def4;
   --color-fg-400: #908caa;
@@ -74,13 +94,13 @@
   --color-text: var(--color-fg-500);
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  font-weight: normal;
-}
+/* *, */
+/* *::before, */
+/* *::after { */
+/*   box-sizing: border-box; */
+/*   margin: 0; */
+/*   font-weight: normal; */
+/* } */
 
 h1,
 h2,

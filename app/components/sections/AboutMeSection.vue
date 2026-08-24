@@ -7,7 +7,7 @@
       <p>
         Kumusta! My name is Yancy, I am like building stuff that piques my interests. Currently
         looking for start-ups to help. I can offer my services in developing web systems primarily
-        using TypeScript ecosystem such as Vue, or React on front-end, and Hono or Golang on
+        using TypeScript ecosystem such as Vue or React on front-end, and Hono or Golang on
         back-end.
         <br />
         <br />
