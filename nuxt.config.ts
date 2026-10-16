@@ -1,7 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
-import tailwindcss from "@tailwindcss/vite";
-
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
@@ -18,7 +16,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: "Portfolio by Yancy",
+      title: "yncynotdev",
       htmlAttrs: {
         lang: "en",
       },
@@ -29,7 +27,7 @@ export default defineNuxtConfig({
         },
         {
           name: "author",
-          content: "Yncy0",
+          content: "yncynotdev",
         },
       ],
     },
@@ -37,9 +35,13 @@ export default defineNuxtConfig({
 
   css: ["~/assets/css/main.css"],
   vite: {
-    plugins: [tailwindcss()],
     optimizeDeps: {
-      include: ["@vueuse/core", "three", "three/examples/jsm/Addons.js"],
+      include: [
+        "@vueuse/core",
+        "three",
+        "three/addons/loaders/GLTFLoader.js",
+        "three/examples/jsm/Addons.js",
+      ],
     },
   },
 

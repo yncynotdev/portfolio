@@ -11,24 +11,27 @@ const orientation = ref<Orientation>(Orientation.horizontal);
 const widthState = ref<number | null>(null);
 
 onMounted(() => {
-  window.addEventListener('resize', onHandleWidthSize);
-})
+  window.addEventListener("resize", onHandleWidthSize);
+});
 
 onBeforeMount(() => {
-  window.addEventListener('resize', onHandleWidthSize);
-})
+  window.addEventListener("resize", onHandleWidthSize);
+});
 
-watch(widthState, () => {
-  if (!widthState.value) return;
+watch(
+  widthState,
+  () => {
+    if (!widthState.value) return;
 
-  if (widthState.value > 640){
-    orientation.value = Orientation.horizontal;
-  }
-  if (widthState.value < 480) {
-    orientation.value = Orientation.vertical;
-  } 
-
-}, { immediate: true });
+    if (widthState.value > 640) {
+      orientation.value = Orientation.horizontal;
+    }
+    if (widthState.value < 480) {
+      orientation.value = Orientation.vertical;
+    }
+  },
+  { immediate: true },
+);
 
 function onHandleWidthSize() {
   widthState.value = window.outerWidth;
@@ -39,7 +42,8 @@ function onHandleWidthSize() {
   <UModal>
     <UButton
       label="View Project"
-      class="w-full flex items-center justify-center bg-linear-to-r from-primary-500 to-primary-400 font-silk-screen" />
+      class="w-full flex items-center justify-center bg-linear-to-r from-primary-500 to-primary-400 font-silk-screen"
+    />
 
     <template #title>
       <h3>{{ props.title }}</h3>
@@ -52,32 +56,38 @@ function onHandleWidthSize() {
     </template>
 
     <template #body>
-      <div v-if="props.images" class="flex flex-col gap-7 lg:px-44 items-center justify-center h-full">
+      <div class="flex flex-col gap-7 lg:px-44 items-center justify-center h-full">
         <UCarousel
           v-slot="{ item }"
           :items="props.images"
           :orientation="orientation"
           loop
           :autoplay="{ delay: 3000 }"
-          arrows 
+          arrows
           :ui="{
             item: 'basis-[70%] transition-opacity [&:not(.is-snapped)]:opacity-100',
             container: 'h-[360px] lg:h-full',
-          }" 
-          class="w-full mx-auto">
-          <img :src="item" alt="Snap images of the Project" >
+          }"
+          class="w-full mx-auto"
+        >
+          <img :src="item" alt="Snap images of the Project" />
         </UCarousel>
       </div>
 
-      <div v-else>
-        <GreenCat />
-      </div>
+      <!-- <div v-else> -->
+      <!--   <!-- <GreenCat /> -->
+      -->
+      <!-- </div> -->
     </template>
 
     <template #footer>
       <div class="flex flex-col gap-5 w-full items-center font-silk-screen text-base-500">
-          <UButton icon="i-lucide-link" class="bg-linear-to-r from-primary-500 to-primary-400">View Project</UButton>
-          <UButton icon="simple-icons:github" class="bg-linear-to-r from-primary-500 to-primary-400">View Project</UButton>
+        <UButton icon="i-lucide-link" class="bg-linear-to-r from-primary-500 to-primary-400"
+          >View Project</UButton
+        >
+        <UButton icon="simple-icons:github" class="bg-linear-to-r from-primary-500 to-primary-400"
+          >View Project</UButton
+        >
       </div>
     </template>
   </UModal>

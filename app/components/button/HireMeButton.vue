@@ -6,7 +6,7 @@ const link = "mailto:yncyncy0@gmail.com";
   <UButton
     aria-label="Hire Me button (I use Neovim btw!)"
     icon="lucide:arrow-right"
-    label="Hire me I use Neovim btw!"
+    label="Hire me I use Neovim and Pi btw!"
     :to="link"
     target="_blank"
     class="bg-linear-to-r from-primary-500 to-primary-400 text-base-500 text-md font-silk-screen"

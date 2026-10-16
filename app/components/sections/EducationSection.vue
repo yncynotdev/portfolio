@@ -9,7 +9,7 @@ const education: Education[] = [
 </script>
 
 <template>
-  <section id="education" class="flex flex-col gap-5 w-full max-w-screen">
+  <section id="education" class="flex flex-col gap-5 w-full max-w-screen pb-24">
     <h2 class="text-lg lg:text-2xl text-primary-500 text-cat-text">Education</h2>
     <UCard class="bg-base-500 text-fg-500 border-3 border-primary-500 rounded-sm">
       <ul class="flex flex-col gap-5">

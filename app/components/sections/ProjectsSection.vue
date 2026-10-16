@@ -9,15 +9,15 @@ import portfolio from "@/assets/images/projects/portfolio/index.png";
 import portfolio1 from "@/assets/images/projects/portfolio/1.png";
 import portfolio2 from "@/assets/images/projects/portfolio/2.png";
 import portfolio3 from "@/assets/images/projects/portfolio/3.png";
-import peter from "@/assets/images/projects/peter.png";
+import peter from "@/assets/images/projects/ClockUp.png";
 
 const projects: Projects[] = [
   {
-    title: "PETER",
+    title: "ClockUp",
     description: "A camera-based attendance system built using Nuxt and Hono.",
-    githubUrl: "",
+    githubUrl: "https://github.com/yncynotdev/ClockUp",
     imageUrl: peter,
-    projectUrl: "https://peter-app-cf.pages.dev",
+    projectUrl: "https://clock-up.pages.dev",
     techstack: peterTechStack,
   },
   {
@@ -37,13 +37,6 @@ const projects: Projects[] = [
     imageUrl: portfolio,
     projectUrl: "https://yncynotdev.nuxt.dev/",
     techstack: portfolioTechStack,
-  },
-  {
-    title: "???",
-    description: "Soon..",
-    githubUrl: "",
-    imageUrl: "",
-    projectUrl: "",
   },
 ];
 </script>

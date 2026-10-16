@@ -23,18 +23,12 @@ onMounted(() => {
       <!-- <p>{{ props.description }}</p> -->
     </template>
 
-    <template>
-    </template>
-
     <template #body>
       <div class="flex flex-col gap-5 w-full">
-        <div v-if="!isEmptyImage">
+        <div>
           <img :src="props.imageUrl" alt="Image of Project" class="w-full" />
         </div>
-        <div v-else>
-          <GreenCat />
-        </div>
-        <p>{{ props.description }}</P>
+        <p>{{ props.description }}</p>
         <ProjectsLink :project-url="props.projectUrl" :github-url="props.githubUrl" />
         <ProjectsTechStack :lists="props.techstack" />
       </div>

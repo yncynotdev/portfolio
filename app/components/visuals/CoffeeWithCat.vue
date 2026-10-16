@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { onBeforeUnmount, onMounted, useTemplateRef } from "vue";
 import { useResizeObserver } from "@vueuse/core";
 import * as THREE from "three";
@@ -6,20 +6,20 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
 import degreeToRadians from "@/utils/degreeToRadians";
 
-const container = useTemplateRef("container");
-const canvas = useTemplateRef("canvas");
+const container = useTemplateRef<HTMLDivElement>("container");
+const canvas = useTemplateRef<HTMLCanvasElement>("canvas");
 
 const clock = new THREE.Timer();
 
-let camera;
-let scene;
-let renderer;
+let camera: THREE.OrthographicCamera;
+let scene: THREE.Scene;
+let renderer: THREE.WebGLRenderer;
 
-let ambientLight;
-let directionalLight;
+let ambientLight: THREE.AmbientLight;
+let directionalLight: THREE.DirectionalLight;
 
-let mesh;
-let mixer;
+let mesh: THREE.Object3D;
+let mixer: THREE.AnimationMixer;
 
 const d = 9;
 
@@ -28,18 +28,19 @@ onMounted(init);
 onBeforeUnmount(() => {
   renderer?.setAnimationLoop(null);
   renderer?.dispose();
+  mixer?.stopAllAction();
 });
 
 useResizeObserver(container, () => {
-  if (container.value) {
-    onWindowResize();
-  }
+  if (!container.value?.clientWidth) return;
+  if (!renderer) init();
+  else onWindowResize();
 });
 
 function init() {
   const element = container.value;
 
-  if (!element || !canvas.value) return;
+  if (!element || !canvas.value || !element.clientWidth || !element.clientHeight) return;
 
   scene = new THREE.Scene();
 
@@ -68,7 +69,7 @@ function init() {
     antialias: true,
   });
 
-  renderer.setSize(width, height);
+  renderer.setSize(width, height, false);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
   loadGLTF();
@@ -133,7 +134,7 @@ function onWindowResize() {
 </script>
 
 <template>
-  <div ref="container" class="hidden h-dvh w-full lg:block">
+  <div ref="container" class="h-dvh w-full lg:block">
     <canvas ref="canvas" class="h-full w-full" />
   </div>
 </template>
