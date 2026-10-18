@@ -9,6 +9,6 @@ const link = "mailto:yncyncy0@gmail.com";
     label="Hire me I use Neovim and Pi btw!"
     :to="link"
     target="_blank"
-    class="bg-linear-to-r from-primary-500 to-primary-400 text-base-500 text-md font-silk-screen"
+    class="rainbow text-md font-silk-screen text-neutral-950"
   />
 </template>

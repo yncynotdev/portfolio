@@ -5,17 +5,14 @@
     >
       <h1 class="text-2xl lg:text-5xl">
         <strong>It is I,</strong>
-        <span class="bg-linear-to-r from-teal-400 to-teal-300 dark:from-teal-500 dark:to-teal-400">
+        <span class="bg-linear-to-r from-primary-400 to-primary-300">
           <strong class="text-transparent">Yancy!</strong>
         </span>
         <br />
         <strong class="text-[2rem] lg:text-6xl">
           A
-          <span class="bg-linear-to-r from-primary-500 to-primary-400 text-transparent"
-            ><strong>Full Stack/</strong></span
-          >
-          <span class="bg-linear-to-r from-purple-500 to-purple-400 text-transparent"
-            ><strong>AI Native Developer</strong></span
+          <span class="rainbow text-transparent"
+            ><strong>Full Stack & AI Native Developer</strong></span
           >
         </strong>
       </h1>

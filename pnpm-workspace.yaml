@@ -6,3 +6,5 @@ allowBuilds:
   unrs-resolver: true
   vue-demi: true
   workerd: true
+minimumReleaseAgeExclude:
+  - '@rollup/rollup-linux-arm64-gnu@4.64.8'

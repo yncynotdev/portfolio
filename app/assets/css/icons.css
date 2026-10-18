@@ -1,0 +1,36 @@
+@import "tailwindcss" theme(static);
+
+@theme static{
+  --color-icon-html: #e34f26;
+  --color-icon-css: #663399;
+  --color-icon-js: #f7df1e;
+  --color-icon-ts: #3178c6;
+  --color-icon-go: #00add8;
+  --color-icon-node: #5fa04e;
+  --color-icon-vue: #4fc08d;
+  --color-icon-nuxt: #00dc82;
+  --color-icon-react: #61dafb;
+  --color-icon-tailwind: #06b6d4;
+  --color-icon-psql: #4169e1;
+  --color-icon-sneklang: #3776ab;
+  --color-icon-git: #f05032;
+  --color-icon-docker: #2496ed;
+  --color-icon-neovim: #57a143;
+  --color-icon-godot: #478cbf;
+  --color-icon-supabase: #3fcf8e;
+  --color-icon-fedora: #51a2da;
+  --color-icon-linux: #fcc624;
+  --color-icon-pinia: #ffd859;
+  --color-icon-fastapi: #009688;
+  --color-icon-zig: #F7A41D;
+  --color-icon-claude: #D97757;
+  --color-icon-cloudflare: #F38020;
+  --color-icon-hono: #E36002;
+  --color-icon-artix: #10A0CC;
+  --color-icon-neon: #34D59A;
+  --color-icon-ghostty: #3551F3;
+  --color-icon-lua: #000080;
+  --color-icon-hono: #E36002;
+  --color-icon-cloudflare: #F38020;
+}
+

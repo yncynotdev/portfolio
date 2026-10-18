@@ -1,7 +1,7 @@
 export default defineAppConfig({
   ui: {
     colors: {
-      primary: "rose",
+      primary: "lavender",
     },
     modal: {
       slots: {

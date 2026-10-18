@@ -1,49 +1,52 @@
 <script setup lang="ts">
-import monthsary from "@/assets/images/projects/monthsary/index.png";
-import monthsary1 from "@/assets/images/projects/monthsary/1.png";
-import monthsary2 from "@/assets/images/projects/monthsary/2.png";
-import monthsary3 from "@/assets/images/projects/monthsary/3.png";
-import monthsary4 from "@/assets/images/projects/monthsary/4.png";
-import monthsary5 from "@/assets/images/projects/monthsary/5.png";
-import portfolio from "@/assets/images/projects/portfolio/index.png";
-import portfolio1 from "@/assets/images/projects/portfolio/1.png";
-import portfolio2 from "@/assets/images/projects/portfolio/2.png";
-import portfolio3 from "@/assets/images/projects/portfolio/3.png";
-import peter from "@/assets/images/projects/ClockUp.png";
-
-const projects: Projects[] = [
+const posts = ref([
   {
     title: "ClockUp",
     description: "A camera-based attendance system built using Nuxt and Hono.",
-    githubUrl: "https://github.com/yncynotdev/ClockUp",
-    imageUrl: peter,
-    projectUrl: "https://clock-up.pages.dev",
+    image: "/img/project-clockup.png",
+    to: "https://clock-up.pages.dev",
+    github: "https://github.com/yncynotdev/ClockUp",
     techstack: peterTechStack,
   },
   {
-    title: "Monthsary Website",
+    title: "Monthsary",
     description: "A project about my girlfriend built using Nuxt and Supabase.",
-    githubUrl: "https://github.com/yncynotdev/monthsary",
-    images: [monthsary, monthsary1, monthsary2, monthsary3, monthsary4, monthsary5],
-    imageUrl: monthsary,
-    projectUrl: "https://monthsary-web.vercel.app/",
+    image: "/img/project-monthsary.png",
+    to: "https://monthsary-web.vercel.app/",
     techstack: monthsaryTechStack,
   },
   {
     title: "Portfolio",
     description: "A creative portfolio built with Nuxt.",
-    githubUrl: "https://github.com/yncynotdev/portfolio",
-    images: [portfolio, portfolio1, portfolio2, portfolio3],
-    imageUrl: portfolio,
-    projectUrl: "https://yncynotdev.nuxt.dev/",
+    image: "/img/project-portfolio.png",
+    to: "https://yncynotdev.vercel.app/",
     techstack: portfolioTechStack,
   },
-];
+]);
 </script>
 
 <template>
   <section class="flex flex-col gap-5">
     <h2 class="text-lg lg:text-2xl text-primary-500">Projects</h2>
-    <ProjectsList :projects="projects" />
+    <UBlogPosts>
+      <UBlogPost
+        v-for="(post, index) in posts"
+        :key="index"
+        :title="post.title"
+        :description="post.description"
+        :image="post.image"
+        :to="post.to"
+        target="_blank"
+        :ui="{ title: 'text-primary-500' }"
+      >
+        <template #description>
+          <div class="flex flex-col gap-4">
+            <p>{{ post.description }}</p>
+
+            <ProjectsTechStack :lists="post.techstack" />
+          </div>
+        </template>
+      </UBlogPost>
+    </UBlogPosts>
   </section>
 </template>

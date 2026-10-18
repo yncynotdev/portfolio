@@ -1,97 +1,56 @@
 @import "tailwindcss" theme(static);
 @import "@nuxt/ui";
 @import "tw-animate-css";
+@import "./icons.css";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme static{
-  --color-base-500: #faf4ed;
-  --color-base-600: #fffaf3;
-  --color-base-700: #f2e9e1;
-
-  --color-fg-500: #575279;
-  --color-fg-400: #797593;
-  --color-fg-300: #9893a5;
-
-  --color-rose-50: #fddde0;
-  --color-rose-100: #fbccd0;
-  --color-rose-200: #f9bbc1;
-  --color-rose-300: #f6a9b2;
-  --color-rose-400: #f298a3;
-  --color-rose-500: #ee8695;
-  --color-rose-600: #c8727e;
-  --color-rose-700: #a45f68;
-  --color-rose-800: #814c53;
-  --color-rose-900: #603a3f;
-  --color-rose-950: #40282b;
-
-  --color-secondary-500: #54cea7;
-  --color-secondary-400: #00b9be;
-
-  --color-tertiary-400: #e7d99c;
-  --color-tertiary-500: #e3ba66;
-
-  --color-icon-html: #e34f26;
-  --color-icon-css: #663399;
-  --color-icon-js: #f7df1e;
-  --color-icon-ts: #3178c6;
-  --color-icon-go: #00add8;
-  --color-icon-node: #5fa04e;
-  --color-icon-vue: #4fc08d;
-  --color-icon-nuxt: #00dc82;
-  --color-icon-react: #61dafb;
-  --color-icon-tailwind: #06b6d4;
-  --color-icon-psql: #4169e1;
-  --color-icon-sneklang: #3776ab;
-  --color-icon-git: #f05032;
-  --color-icon-docker: #2496ed;
-  --color-icon-neovim: #57a143;
-  --color-icon-godot: #478cbf;
-  --color-icon-supabase: #3fcf8e;
-  --color-icon-fedora: #51a2da;
-  --color-icon-linux: #fcc624;
-  --color-icon-pinia: #ffd859;
-  --color-icon-fastapi: #009688;
-  --color-icon-zig: #F7A41D;
-  --color-icon-claude: #D97757;
-  --color-icon-cloudflare: #F38020;
-  --color-icon-hono: #E36002;
-  --color-icon-artix: #10A0CC;
-  --color-icon-neon: #34D59A;
-  --color-icon-ghostty: #3551F3;
-  --color-icon-lua: #000080;
-  --color-icon-hono: #E36002;
-  --color-icon-cloudflare: #F38020;
+  --color-lavender-50: #f5f6ff;
+  --color-lavender-100: #eceeff;
+  --color-lavender-200: #dce1ff;
+  --color-lavender-300: #cbd2ff;
+  --color-lavender-400: #bec7ff;
+  --color-lavender-500: #b4befe;
+  --color-lavender-600: #929ce8;
+  --color-lavender-700: #707bc9;
+  --color-lavender-800: #525ba3;
+  --color-lavender-900: #39417b;
+  --color-lavender-950: #252b52; /* --color-lavender-950: #252a52; */
 
   --font-silk-screen: "Silkscreen", monospace;
   --font-pixelify-sans: 'Pixelify Sans', sans-serif;
 }
 
-.dark {
-  --color-base-500: #232136;
-  --color-base-600: #2a273f;
-  --color-base-700: #393552;
-
-  --color-rose-50: #fbe2e0;
-  --color-rose-100: #f9d4d1;
-  --color-rose-200: #f6c5c2;
-  --color-rose-300: #f2b7b4;
-  --color-rose-400: #eea8a5;
-  --color-rose-500: #ea9a97;
-  --color-rose-600: #db9794;
-  --color-rose-700: #cc9390;
-  --color-rose-800: #bd908d;
-  --color-rose-900: #ae8c8a;
-  --color-rose-950: #9f8886;
-
-  --color-fg-500: #e0def4;
-  --color-fg-400: #908caa;
-  --color-fg-300: #6e6a86;
+:root {
+  --ui-radius: 0.95rem;
+  --ui-success: #286983;
+  --ui-bg: #faf4ed;
+  --ui-bg-muted: #f4ede8;
+  --ui-bg-elevated: #fffaf3;
+  --ui-bg-accented: #f2e9e1;
+  --ui-text: #464261;
+  --ui-text-highlighted: #464261;
+  --ui-text-toned: #797593;
+  --ui-text-muted: #9893a5;
+  --ui-border: #cecacd;
+  --ui-border-muted: #dfdad9;
+  --ui-border-accented: #56949f;
 }
 
-:root {
-  --color-background: var(--color-base-500);
-  --color-text: var(--color-fg-500);
+.dark {
+  --ui-success: #3e8fb0;
+  --ui-bg: #232136;
+  --ui-bg-muted: #2a283e;
+  --ui-bg-elevated: #2a273f;
+  --ui-bg-accented: #393552;
+  --ui-text: #e0def4;
+  --ui-text-highlighted: #e0def4;
+  --ui-text-toned: #908caa;
+  --ui-text-muted: #6e6a86;
+  --ui-border: #56526e;
+  --ui-border-muted: #44415a;
+  --ui-border-accented: #9ccfd8;
 }
 
 /* *, */
@@ -125,14 +84,12 @@ button {
 
 body {
   min-height: 100vh;
-  color: var(--color-text);
-  background: var(--color-background);
+  background: var(--ui-bg);
   transition:
     color 0.5s,
     background-color 0.5s;
   line-height: 1.6;
   font-family: "Silkscreen", monospace;
-  /* font-family: "Poppins", monospace; */
   font-size: 0.9rem;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -148,5 +105,41 @@ body {
   p,
   button {
     font-size: 1rem;
+  }
+}
+
+/* shared animated rainbow gradient */
+.rainbow {
+  background-image: linear-gradient(
+    90deg,
+    #ff4d4d,
+    #ff9f45,
+    #ffe14d,
+    #4dff88,
+    #4dd2ff,
+    #a04dff,
+    #ff4d4d
+  );
+  background-size: 300% 100%;
+  animation:
+    rainbow-slide 4s linear infinite,
+    rainbow-blink 2s ease-in-out infinite;
+}
+
+@keyframes rainbow-slide {
+  to {
+    background-position: 300% 0;
+  }
+}
+
+@keyframes rainbow-blink {
+  50% {
+    opacity: 0.55;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rainbow {
+    animation: none;
   }
 }
