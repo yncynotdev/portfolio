@@ -87,6 +87,12 @@ export default defineNuxtConfig({
     },
   },
 
+  runtimeConfig: {
+    public: {
+      bucket: "",
+    },
+  },
+
   routeRules: {
     "/": { prerender: true },
   },

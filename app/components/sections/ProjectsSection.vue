@@ -1,9 +1,11 @@
 <script setup lang="ts">
+const config = useRuntimeConfig();
+
 const posts = ref([
   {
     title: "ClockUp",
     description: "A camera-based attendance system built using Nuxt and Hono.",
-    image: "/img/project-clockup.png",
+    image: `${config.public.bucket}/img/project-clockup.png`,
     to: "https://clock-up.pages.dev",
     github: "https://github.com/yncynotdev/ClockUp",
     techstack: peterTechStack,
@@ -11,14 +13,14 @@ const posts = ref([
   {
     title: "Monthsary",
     description: "A project about my girlfriend built using Nuxt and Supabase.",
-    image: "/img/project-monthsary.png",
+    image: `${config.public.bucket}/img/project-monthsary.png`,
     to: "https://monthsary-web.vercel.app/",
     techstack: monthsaryTechStack,
   },
   {
     title: "Portfolio",
     description: "A creative portfolio built with Nuxt.",
-    image: "/img/project-portfolio.png",
+    image: `${config.public.bucket}/img/project-portfolio.png`,
     to: "https://yncynotdev.vercel.app/",
     techstack: portfolioTechStack,
   },

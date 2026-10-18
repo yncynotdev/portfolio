@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const config = useRuntimeConfig();
+
 const items = ref([
   {
     date: "2026",
@@ -7,7 +9,7 @@ const items = ref([
     description:
       "Built a punch-card attendance system for seminarians, faculty, and non-teaching personel.",
     avatar: {
-      src: "/img/logo-ics.jpg",
+      src: `${config.public.bucket}/img/logo-ics.jpg`,
     },
   },
   {
@@ -16,7 +18,7 @@ const items = ref([
     company: "Xentra",
     description: "Internship for developing systems using Decisions Platform.",
     avatar: {
-      src: "/img/logo-xentra.jpg",
+      src: `${config.public.bucket}/img/logo-xentra.jpg`,
     },
   },
 ]);
