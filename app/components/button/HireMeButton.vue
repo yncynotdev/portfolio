@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const link = "mailto:yncyncy0@gmail.com";
+const link = "mailto:paalayancy@gmail.com";
 </script>
 
 <template>
