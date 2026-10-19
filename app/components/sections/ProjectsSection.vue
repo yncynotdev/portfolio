@@ -21,7 +21,7 @@ const posts = ref([
     title: "Portfolio",
     description: "A creative portfolio built with Nuxt.",
     image: `${config.public.bucket}/img/project-portfolio.png`,
-    to: "https://yncynotdev.vercel.app/",
+    to: "https://yncynotdev.pages.dev/",
     techstack: portfolioTechStack,
   },
 ]);

@@ -85,15 +85,12 @@ export default defineNuxtConfig({
     prerender: {
       autoSubfolderIndex: false,
     },
+    preset: "cloudflare_pages",
   },
 
   runtimeConfig: {
     public: {
       bucket: "",
     },
-  },
-
-  routeRules: {
-    "/": { prerender: true },
   },
 });

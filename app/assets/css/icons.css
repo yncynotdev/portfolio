@@ -7,6 +7,7 @@
   --color-icon-ts: #3178c6;
   --color-icon-go: #00add8;
   --color-icon-node: #5fa04e;
+  --color-icon-spring: #6DB33F;
   --color-icon-vue: #4fc08d;
   --color-icon-nuxt: #00dc82;
   --color-icon-react: #61dafb;
@@ -14,6 +15,7 @@
   --color-icon-psql: #4169e1;
   --color-icon-sneklang: #3776ab;
   --color-icon-git: #f05032;
+  --color-icon-github-actions: #2088FF;
   --color-icon-docker: #2496ed;
   --color-icon-neovim: #57a143;
   --color-icon-godot: #478cbf;
@@ -32,5 +34,7 @@
   --color-icon-lua: #000080;
   --color-icon-hono: #E36002;
   --color-icon-cloudflare: #F38020;
+  --color-icon-openapi: #6BA539;
+  --color-icon-swagger: #85EA2D;
 }
 
