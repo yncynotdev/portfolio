@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const title = Array.from("Full Stack & AI Native Developer");
+const lines = ["Full Stack & AI Native", "Developer"].map((line) => Array.from(line));
 </script>
 
 <template>
@@ -14,15 +14,16 @@ const title = Array.from("Full Stack & AI Native Developer");
         </span>
         <br />
         <strong class="text-[2rem] lg:text-6xl">
-          A
           <span class="text-transparent"
             ><strong
-              ><span
-                v-for="(char, i) in title"
-                :key="i"
-                class="wave rainbow whitespace-pre"
-                :style="{ '--i': i }"
-                >{{ char }}</span
+              ><span v-for="(line, l) in lines" :key="l" class="block"
+                ><span
+                  v-for="(char, i) in line"
+                  :key="i"
+                  class="wave rainbow whitespace-pre"
+                  :style="{ '--i': i + (l ? lines[0].length : 0) }"
+                  >{{ char }}</span
+                ></span
               ></strong
             ></span
           >
