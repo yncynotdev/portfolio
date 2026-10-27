@@ -14,10 +14,6 @@ export default defineNuxtConfig({
     "@nuxt/ui",
   ],
 
-  colorMode: {
-    preference: "dark",
-  },
-
   app: {
     head: {
       title: "yncynotdev",
