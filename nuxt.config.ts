@@ -29,6 +29,50 @@ export default defineNuxtConfig({
           name: "author",
           content: "yncynotdev",
         },
+        {
+          property: "og:locale",
+          content: "en_US",
+        },
+        {
+          property: "og:title",
+          content: "yncynotdev - Full Stack & AI Native Developer",
+        },
+        {
+          property: "og:description",
+          content: "Just a simple Portfolio website built using Nuxt",
+        },
+        {
+          property: "og:type",
+          content: "website",
+        },
+        {
+          property: "og:url",
+          content: "https://yncynotdev.com",
+        },
+        {
+          property: "og:image",
+          content: "https://yncynotdev.com/logo.png",
+        },
+        {
+          property: "og:site_name",
+          content: "yncynotdev",
+        },
+        {
+          name: "twitter:card",
+          content: "summary_large_image",
+        },
+        {
+          name: "twitter:title",
+          content: "yncynotdev - Full Stack & AI Native Developer",
+        },
+        {
+          name: "twitter:description",
+          content: "Just a simple Portfolio website built using Nuxt",
+        },
+        {
+          name: "twitter:image",
+          content: "https://yncynotdev.com/logo.png",
+        },
       ],
       link: [
         {
