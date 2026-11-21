@@ -30,7 +30,7 @@ const active = ref(1);
   <section class="flex flex-col gap-5 w-full max-w-screen">
     <h2 class="text-lg lg:text-2xl text-primary-500">Experiences</h2>
 
-    <UPageCard class="border border-primary-500">
+    <UPageCard highlight>
       <UTimeline v-model="active" :items="items">
         <template #title="{ item }">
           <span class="font-silk-screen font-bold text-md lg:text-lg text-primary-500">

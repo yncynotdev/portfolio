@@ -15,7 +15,7 @@ export type Projects = {
   imageUrl?: string;
   githubUrl?: string;
   projectUrl?: string;
-  techstack?: Technologies[]
+  techstack?: Technologies[];
 };
 
 // SocialsList.vue
@@ -32,4 +32,3 @@ export interface Technologies {
   size?: number;
   color?: string;
 }
-

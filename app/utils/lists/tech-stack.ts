@@ -20,10 +20,10 @@ export const techStackList: Technologies[] = [
     color: "text-icon-js",
   },
   {
-    name: "TypeScript",
-    icon: "simple-icons:typescript",
+    name: "Vue",
+    icon: "simple-icons:vuedotjs",
     size: 36,
-    color: "text-icon-ts",
+    color: "text-icon-vue",
   },
   {
     name: "React",
@@ -84,6 +84,12 @@ export const techStackList: Technologies[] = [
     icon: "simple-icons:fastapi",
     size: ICON_SIZE,
     color: "text-icon-fastapi",
+  },
+  {
+    name: "Docker",
+    icon: "simple-icons:docker",
+    size: 36,
+    color: "text-icon-docker",
   },
   {
     name: "Godot",

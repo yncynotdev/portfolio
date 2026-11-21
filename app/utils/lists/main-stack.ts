@@ -1,11 +1,5 @@
 export const mainStackList: Technologies[] = [
   {
-    name: "Vue",
-    icon: "simple-icons:vuedotjs",
-    size: 36,
-    color: "text-icon-vue",
-  },
-  {
     name: "Nuxt",
     icon: "simple-icons:nuxt",
     size: 36,
@@ -16,6 +10,12 @@ export const mainStackList: Technologies[] = [
     icon: "simple-icons:hono",
     size: 32,
     color: "text-icon-hono",
+  },
+  {
+    name: "TypeScript",
+    icon: "simple-icons:typescript",
+    size: 36,
+    color: "text-icon-ts",
   },
   {
     name: "Postgres",
@@ -30,10 +30,10 @@ export const mainStackList: Technologies[] = [
     color: "text-icon-git",
   },
   {
-    name: "Docker",
-    icon: "simple-icons:docker",
+    name: "Podman",
+    icon: "simple-icons:podman",
     size: 36,
-    color: "text-icon-docker",
+    color: "text-icon-podman",
   },
   {
     name: "Neovim",

@@ -3,6 +3,7 @@
   <ProjectsSection />
   <ExperienceSection />
   <TechStackSection />
+  <CertificationSection />
   <EducationSection />
 
   <!-- <HireMeButton /> -->

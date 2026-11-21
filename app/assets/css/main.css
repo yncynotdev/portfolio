@@ -5,7 +5,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@theme static{
+@theme static {
   --color-lavender-50: #f5f6ff;
   --color-lavender-100: #eceeff;
   --color-lavender-200: #dce1ff;
@@ -19,7 +19,7 @@
   --color-lavender-950: #252b52; /* --color-lavender-950: #252a52; */
 
   --font-silk-screen: "Silkscreen", monospace;
-  --font-pixelify-sans: 'Pixelify Sans', sans-serif;
+  --font-pixelify-sans: "Pixelify Sans", sans-serif;
 }
 
 :root {
@@ -73,13 +73,12 @@ strong {
 }
 
 a,
-p,
- {
+p {
   font-size: 1.1rem;
 }
 
 button {
-  font-size: 0.9rem
+  font-size: 0.9rem;
 }
 
 body {
@@ -96,7 +95,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 640px) {
   body {
     font-size: 1.2rem;
   }
