@@ -1,14 +1,14 @@
 export const mainStackList: Technologies[] = [
   {
-    name: "Nuxt",
-    icon: "simple-icons:nuxt",
+    name: "Vue",
+    icon: "simple-icons:vuedotjs",
     size: 36,
-    color: "text-icon-nuxt",
+    color: "text-icon-vue",
   },
   {
     name: "Hono",
     icon: "simple-icons:hono",
-    size: 32,
+    size: 36,
     color: "text-icon-hono",
   },
   {

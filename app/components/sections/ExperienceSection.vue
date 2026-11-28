@@ -3,20 +3,20 @@ const config = useRuntimeConfig();
 
 const items = ref([
   {
-    date: "2026",
-    title: "Full Stack Developer (Freelance)",
+    date: "Apr 2026 - Aug 2026",
+    title: "Full Stack Developer (Part-Time)",
     company: "Immaculate Conception Seminary",
     description:
-      "Built a punch-card attendance system for seminarians, faculty, and non-teaching personel.",
+      "Built a camera-based attendance system for seminarians, replacing bundy clock system.",
     avatar: {
       src: `${config.public.bucket}/img/logo-ics.jpg`,
     },
   },
   {
-    date: "2026",
-    title: "Decisions Dev Trainee",
-    company: "Xentra",
-    description: "Internship for developing systems using Decisions Platform.",
+    date: "Feb 2026 - May 2026",
+    title: "Intern",
+    company: "Xentra Solutions",
+    description: "Finished Platform Certification for Decisions platform.",
     avatar: {
       src: `${config.public.bucket}/img/logo-xentra.jpg`,
     },
@@ -34,7 +34,7 @@ const active = ref(1);
       <UTimeline v-model="active" :items="items">
         <template #title="{ item }">
           <span class="font-silk-screen font-bold text-md lg:text-lg text-primary-500">
-            {{ item.title }} - <span>{{ item.company }}</span>
+            {{ item.company }} - <span>{{ item.title }}</span>
           </span>
         </template>
         <template #date="{ item }">

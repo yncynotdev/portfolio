@@ -20,10 +20,10 @@ export const techStackList: Technologies[] = [
     color: "text-icon-js",
   },
   {
-    name: "Vue",
-    icon: "simple-icons:vuedotjs",
-    size: 36,
-    color: "text-icon-vue",
+    name: "Nuxt",
+    icon: "simple-icons:nuxt",
+    size: ICON_SIZE,
+    color: "text-icon-nuxt",
   },
   {
     name: "React",
